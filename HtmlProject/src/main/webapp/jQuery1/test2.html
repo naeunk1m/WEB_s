@@ -7,28 +7,29 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		// 대상.함수()
-		// 대상 :  *, 태그, id=이름 #이름, class=이름 .이름, ...
+		// 대상 : * , 태그, id=이름 #이름, class=이름 .이름,...
 		$('*').css('color','red');
-		$('hi').css('color','blue');
+		$('h1').css('color','blue');
 		$('#a').css('color','green');
 		$('.b').css('color','orange');
-		// 태그[속성] 태그[속성=값] 태그[속성^=값] 태그[속성$=값] 끝
-		// 태그[속성*=값] 포함
+		// 태그[속성] 태그[속성=값]  태그[속성^=값] 시작 태그[속성$=값] 끝
+// 		태그[속성*=값] 포함
 		$('input[type=text]').css('color','skyblue');
-		$('input[type=password]').css('color','purple');
-		// 태그 : odd 홀수번째, 태그 : even 짝수번째, 태그 : first 첫 번째, 태그 : last 마지막
-		// 0번째부터 시작
+		$('input[type=password]').css('color','yellow');
+// 		태그:odd 홀수번째, 태그:even 짝수번째,
+//      태그:first 첫번째 , 태그:last 마지막
+//      0번째 부터 시작
 		$('h1:odd').css('background-color','skyblue');
-		$('h1:even').css('background-color','yellow');
+		$('h1:even').css('background-color','pink');s
 	});
 </script>
 </head>
 <body>
 아이디 : <input type="text"><br>
 비밀번호 : <input type="password"><br>
-<h1>제목☝<h1>
-<h1 id="a">제목✌</h1>
-<h1 class="b">제목👌<h1>
+<h1>제목1</h1>
+<h1 id="a">제목2</h1>
+<h1 class="b">제목3</h1>
 본문 내용
 </body>
 </html>

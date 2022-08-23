@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery1/test6.html</title>
+<script type="text/javascript" src="jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#fr').submit(function(){
+// 			alert('전송');
+			//태그의 value값 가져오는 함수 => 대상.val()
+// 			alert($('#id').val());
+// 			alert($('#pass').val());
+			if($('#id').val()==''){
+// 				alert("아이디 입력하세요");
+				$('#iddiv').html("아이디 입력하세요");
+				$('#iddiv').css('color','blue');
+				$('#id').focus();
+				return false;
+			}
+			if($('#pass').val()==''){
+// 				alert("비밀번호 입력하세요");
+				$('#passdiv').html("비밀번호 입력하세요");
+				$('#passdiv').css('color','blue');
+				$('#pass').focus();
+				return false;
+			}
+			//성별 체크 제어 => radio,check
+			//체크 되어 있으면 true/ 안되어있으면 false
+// 			alert($('#man').is(':checked'));
+// 			alert($('#woman').is(':checked'));
+if($('#man').is(':checked')==false && $('#woman').is(':checked')==false){
+	alert('성별 체크하세요');
+	return false;
+}
+		});
+		
+		//focus() 해제 이벤트 => blur() 
+		$('#id').blur(function(){
+// 			alert("해제");
+			$('#iddiv').html("멋진 아이디 입력");
+			$('#iddiv').css('color','green');
+		});
+		
+		
+	});
+</script>
+</head>
+<body>
+<form action="a.jsp" method="post" id="fr">
+아이디 : <input type="text" name="id" id="id"><br>
+        <div id="iddiv"></div><br>
+비밀번호 : <input type="password" name="pass" id="pass"><br>
+        <div id="passdiv"></div><br>
+성별 : <input type="radio" name="gender" id="man" value="남">남
+<input type="radio" name="gender" id="woman" value="여">여<br>
+<input type="submit" value="전송" id="btn">
+</form>
+</body>
+</html>

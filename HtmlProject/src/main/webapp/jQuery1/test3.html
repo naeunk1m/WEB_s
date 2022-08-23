@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery1/test3.html</title>
+<script type="text/javascript" src="jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+// 		대상.함수()  대상.attr()  태그 속성값 변경
+//      대상.attr('태그속성','값')
+
+// 		$('img').attr('width',200);
+// 		$('img').attr('height',200);
+// 		$('img').attr('border',10);
+
+		$('img').attr({
+			width:200,
+			height:200,
+			border:5
+		});
+		
+// 		대상.함수()  대상.html()  대상의 내용을 변경
+//      대상.html(변경할내용)
+		$('h1').html('변경내용');
+		
+// 		대상.함수()  대상.append()  대상의 내용 뒤부분에 추가
+//      대상.append(추가할내용)
+		$('div').append('추가할내용');
+		
+		$('table').append('<tr><td>1</td><td>제목1</td></tr>');
+	});
+</script>
+</head>
+<body>
+<table border="1">
+<tr><td>번호</td><td>제목</td></tr>
+</table>
+
+<div>div-0</div>
+<div>div-1</div>
+<div>div-2</div>
+
+<h1>head-0</h1>
+<h1>head-1</h1>
+<h1>head-2</h1>
+
+<img src="../images/7.jpg" width="100" height="400" border="1">
+
+</body>
+</html>

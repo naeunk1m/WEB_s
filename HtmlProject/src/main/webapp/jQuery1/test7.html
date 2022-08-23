@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery1/test7.html</title>
+<style type="text/css">
+	#anidiv{
+		width: 50px; height: 50px; background-color: orange;
+	}
+</style>
+<script type="text/javascript" src="jquery-3.6.0.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//효과 show() hide() toggle()
+	//    slideDown() slideUp() slideToggle()
+	//    fadeIn() fadeOut() fadeToggle()
+	
+	// h1태그 클릭했을때 이벤트
+	$('h1').click(function(){
+// 		alert("클릭");
+// 		h1클릭 하면 클릭 h1다음 태그 next() 보이고 안보이고 효과적용
+//      대상.함수().함수()
+		$(this).next().toggle('slow',function(){
+			alert('효과 끝');
+		});
+	});
+	
+	// animate()
+	$('#anidiv').click(function(){
+// 		alert("클릭");
+// 		alert($(this).css('width'));
+// 		alert($(this).css('height'));
+		
+		var wid=$(this).css('width');
+		var hei=$(this).css('height');
+		
+		//문자열을 정수형 변경 parseInt(문자열)=> 정수
+		$(this).animate({
+			width : parseInt(wid)+50,
+			height : parseInt(hei)+50
+		},'slow');
+	});
+});
+</script>
+</head>
+<body>
+<div id="anidiv"></div>
+
+<h1>열고 닫기1</h1>
+<div>
+<h1>제목1</h1>
+<p>내용1</p>
+</div>
+
+<h1>열고 닫기2</h1>
+<div>
+<h1>제목2</h1>
+<p>내용2</p>
+</div>
+</body>
+</html>
+
+
+

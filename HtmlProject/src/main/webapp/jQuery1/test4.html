@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery1/test4.html</title>
+<script type="text/javascript" src="jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// 자바스크립트 배열변수 
+		var arr=[
+			{'id':'kim','name':'kimgildong'},
+			{'id':'lee','name':'leegildong'},
+			{'id':'park','name':'parkgildong'}
+		];
+		//반복문  대상.each(배열변수,function(){});
+		$.each(arr,function(index,item){
+// 			alert(index); //0 1 2
+// 			alert(item.id);
+// 			alert(item.name);
+			//테이블 태그에 추가
+$('table').append('<tr><td>'+item.id+'</td><td>'+item.name+'</td></tr>');
+		});
+		
+	});
+</script>
+</head>
+<body>
+<table border="1">
+<tr><td>아이디</td><td>이름</td></tr>
+</table>
+</body>
+</html>
