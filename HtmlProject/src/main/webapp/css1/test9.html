@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test9.html</title>
+<style type="text/css">
+.box1{
+	width: 300px; height: 200px;
+/* 	border: 1px solid black;   */
+/* 테두리선 두께 */
+	border-width: 1px;
+/* 테두리선 스타일 */
+	border-style: solid;
+/* 	테두리선 색 */
+	border-color: black;
+/* 	밖 여백 */
+	margin : 50px;
+}
+.box2{
+	width: 300px; height: 200px;
+/* 	border: 1px solid black;   */
+	border-width: thin;
+	border-style: dotted;
+	border-color: black;
+/* 	밖 여백 => 겹쳐지는 여백 합쳐짐 : 마진 중첩 */
+	margin : 50px 30px;
+}
+.box3{
+	width: 300px; height: 200px;
+	border-width: medium;
+	border-style: dashed;
+/* 	위, 아래 | 왼, 오른쪽 */
+	border-color: red blue;
+/* 	밖 여백 */
+	margin : 50px 30px 50px 30px;
+}
+.box4{
+	width: 300px; height: 200px;
+/* 	border: 1px solid black;   */
+	border-width: thick;
+	border-style: double;
+/* 	위(yellos) 오른쪽(green) 아래(pink) 왼쪽(purple) 순으로 */
+	border-color: yellow green pink purple;
+/* 	밖 여백 */
+	margin : 50px auto;
+}
+.box5{
+	width: 300px; height: 200px;
+/* 	border: 1px solid black;   */
+	border-width: 5px;
+	border-style: inset;
+	border-color: black;
+/* 	하나씩 테두리 적용하기 */
+	border-top-color: green; 
+	border-right-color: blue;
+	border-bottom-color: black;
+	border-left-color: red;
+} 
+</style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+<div class="box5"></div>
+</body>
+</html>

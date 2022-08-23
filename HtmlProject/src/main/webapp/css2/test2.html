@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test2.html</title>
+<style type="text/css">
+/*2. 속성 선택자 : 태그 속성 선택 => [속성] */
+li{
+	list-style-type: none;
+	width: 120px;
+	display: inline-block;
+	margin:10px;
+}
+a{
+	text-decoration: none;
+	padding: 5px 20px;
+	font-size: 14px;
+	font-weight: bold;
+}
+ a[href]{
+ 	background-color: #B0C4DE;
+ 	border: 1px solid #ccc;
+ }
+/*2. 속성 선택자 : 태그 속성 선택 => 태그[속성 = 속성값] */
+a[target=_blank]{ /* target이 _blank인 것을 찾아서 스타일을 적용하겠다. */
+	padding-right: 40px;
+	background-image: url("../css1/storytelling.png");
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: 25px;
+}
+/*2. 속성 선택자 : 태그 속성 선택 => 태그[속성 ~= 속성값] 포함하는 속성 */
+a[class~=button]{/* 버튼이라는 클래스를 포함하고 있으면 전부 스타일 적용 하겠다. 
+					띄어쓰기 인정, -혹은 _로 이어진 건 포함시키지 않음*/
+	border-radius: 5px;
+	box-shadow: 4px 4px;
+}
+/*2. 속성 선택자 : 태그 속성 선택 => 태그[속성 |= 속성값] 단어 안에 글자 포함하는 속성 */
+a[title|=us]{ /* _나 -에 영향받지 않고 포함되어 있으면 무조건 스타일 적용함. */
+	color:red;
+}
+/*2. 속성 선택자 : 태그 속성 선택 => 태그[속성 ^= 속성값] 시작하는 속성 */
+a[class^=b] { /* b로 시작하는 단어의 클래스를 찾아 스타일 적용 */
+	color:green;
+}
+/*2. 속성 선택자 : 태그 속성 선택 => 태그[속성 $= 속성값] 끝나는 속성 */
+a[class$=on]{ /* on으로 끝나는 단어의 클래스를 찾아 스타일 적용 */
+	background-color: pink;
+}
+/*2. 속성 선택자 : 태그 속성 선택 => 태그[속성 *= 속성값] 모두 포함하는 속성 */
+a[class*=at]{ /* at가 포함된 클래스를 찾아 모두 스타일 적용 */
+	text-decoration: line-through;
+}
+
+</style>
+</head>
+<body>
+<ul>
+	<li><a>메인 메뉴 : </a></li>
+	<li><a href="ex1.html" target="_blank">메뉴1 </a></li>
+	<li><a href="#" title="us-english">메뉴2 </a></li>
+	<li><a href="#" class="button">메뉴3 </a></li>
+	<li><a href="#" class="flat button">메뉴4 </a></li>
+</ul>
+</body>
+</html>

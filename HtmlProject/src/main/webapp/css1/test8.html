@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html1/test8.html<</title>
+<style type="text/css">
+*{
+/*  	border: 1px solid black;  */
+/* 	문단태그(블록 레벨 요소) : 전체영역(한줄전체), 너비100% 
+h1, div, p */
+}
+h1{
+	padding: 10px;
+}
+.accent{
+	color: red;
+/* 	글자영역 태그(인라인 레벨 요소): 글자영역(작은영역) 
+    한줄 차지하지 않습니다. 콘텐츠 만큼 영역 차지, 
+    나머지공간 다른요소가 올수 있음
+    span strong img */
+}
+.box1{
+border: 1px solid black;
+/* 콘텐츠영역 */
+	width: 400px;
+	height: 100px;
+/* 	박스모델 크기 계산 box-sizing */
+/* border-box 테두리선포함영역, content-box 콘텐츠영역(기본) */
+	box-sizing: border-box ;
+	
+	box-shadow : 2px -2px 5px 0px ;
+/* 	둥근 테두리 border-radius 픽셀, 백분율 */
+	border-radius : 25%;
+	
+	
+}
+.box2{
+border: 1px solid black;
+	width: 50%;
+	height: 100px;
+/* 	박스모델에 그림자 효과 box-shadow 속성
+	수평(왼, 오른쪽) 수직(위, 아래) 흐림정도 번짐정도 색상 */
+	box-shadow:5px 5px 15px 5px blue;
+	border-radius: 10px 20px 30px 40px;
+}
+
+img {
+/* 테두리 둥글게 */
+border-radius: 20px;
+}
+</style>
+</head>
+<body>
+<img src="top.jpg">
+<h1>시간이란</h1>
+<div>내일 죽을 것처럼 <span class="accent">오늘</span>을 살고</div>
+<p>영원히 살 것처럼 내일을 꿈꾸어라</p>
+
+<div class="box1"></div>
+<div class="box2"></div>
+</body>
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test8.html</title>
+<style type="text/css">
+/* 애니메이션 */
+.box{
+	width: 100px;
+	height: 100px;
+	margin: 50px;
+	float:left;
+}
+#box1{
+	background-color:#778899;
+/* 	테두리색 투명 */
+	border: 1px solid transparent;
+	animation-name:shape;
+	animation-duration:0.05s;
+/* 	animation-timing-function:ease-in; */
+/* 	animation-direction:alternate; */
+	animation-iteration-count: infinite;
+/* 	animation: name| duration|function|delay|count|direction */
+}
+
+#box2{
+	background-color: #B0C4DE;
+/* 	테두리색 투명 */
+	border: 1px solid transparent;
+	animation-name:rotate;
+	animation-duration:0.00005s;
+/* 	animation-timing-function:ease-in; */
+/* 	animation-direction:alternate; */
+	animation-iteration-count: infinite;
+}
+@keyframes shape{
+	from{
+		border:1px solid transparent;
+	}
+	to{
+		border:1px solid pink;
+		border-radius:50%;
+	}
+}
+
+@keyframes rotate{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(45deg);
+		}
+}
+</style>
+</head>
+<body>
+<div id="container">
+	<div class="box" id="box1"></div>
+	<div class="box" id="box2"></div>
+</div>
+</body>
+</html>

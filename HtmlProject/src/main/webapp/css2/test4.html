@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test4.html</title>
+<style type="text/css">
+/* 3. 가상클래스, 가상요소 ==> 사용자 동작에 반응
+태그 : enabled 태그 : disabled
+ */
+ input:disabled {
+	border: none;
+}
+/* 태그 : checked	  */
+input:checked + label{
+	color: red;
+}
+/* 제외
+태그 : not(제외할 대상)
+ */
+input:not([type=radio]){
+	border: 1px solid blue;
+}
+</style>
+</head>
+<body>
+<form action="a.jsp" method="post" id = "signup">
+<fieldset>
+<legend>개인정보</legend>
+<ul>
+<li><label>이름</label><input type="text" name="name" value="홍길동" disabled></li>
+<li><label>연락처</label><input type="tel" name="tel"></li>
+</ul>
+</fieldset>
+<fieldset>
+<legend>객실 형태</legend>
+<ul>
+<li><label>이름</label><input type="radio" name="room"><label>기본형 (최대 2인)</label></li>
+<li><label>이름</label><input type="radio" name="room"><label>가족형 (최대 8인)</label></li>
+</ul>
+</fieldset>
+<input type="submit" value="제출">
+</form>
+</body>
+</html>

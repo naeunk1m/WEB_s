@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/ex4.html p386</title>
+<style type="text/css">
+*{
+	box-sizing: border-box;
+}
+.top-menu{
+	margin:50px auto;
+	list-style-type: none;
+	padding:0px;
+	width: 605px;
+	height: 35px;
+	box-shadow: 0px 3px 0px 4px #778899;
+	background-color:#B0C4DE;
+}
+.top-menu li{
+	float:left;
+	border-right: 1px solid #929292;
+}
+.top-menu li a{
+/* 줄간격 밑줄 없앰. */
+	color: black;
+	text-align:center;
+	display:block;
+	width:100px;
+	height:35px;
+	text-decoration: none;
+	line-height: 35px;
+	transition : 0.5s ease-in;
+	
+}
+.top-menu li:last-child{
+	border: none;
+}
+.top-menu li:not(:last-child) a:hover{
+	background-color: #4682B4;
+	color: white;
+}
+.top-menu li:last-child a:hover{
+	background-color:#9370DB;
+	color: white;
+}
+</style>
+</head>
+<body>
+<nav>
+	<ul class="top-menu">
+		<li><a href="#">메뉴1</a></li>
+		<li><a href="#">메뉴2</a></li>
+		<li><a href="#">메뉴3</a></li>
+		<li><a href="#">메뉴4</a></li>
+		<li><a href="#">메뉴5</a></li>
+		<li><a href="#">메뉴6</a></li>
+<!-- 		<li><a href="#">메뉴7</a></li> -->
+	</ul>
+</nav>
+
+</body>
+</html>

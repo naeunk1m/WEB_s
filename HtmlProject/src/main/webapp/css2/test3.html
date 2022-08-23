@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test3.html</title>
+<style type="text/css">
+/* 3. 가상클래스, 가상요소 => 사용자 동작에 반응
+	  태그 : link 하이퍼링크 , 태그 : visited 방문했을 때, 태그 : active 클릭했을 때
+	  태그 : hover 마우스를 태그 위에 올려두었을 때, 태그 : focus */
+.container{
+	width: 960px; margin: 0px auto;
+}
+.navi{
+	width: 960px; height: 60px; padding-bottom: 10px;
+	border-bottom: 2px solid #ccc;
+}
+.navi ul{
+	list-style-type: none;
+	padding-bottom: 5px; padding-top: 10px;
+	
+}
+.navi ul li{
+	float: left;
+	width:150px;
+	padding: 10px;
+}
+.navi a:link, .navi a:visited  {
+	display: block;
+	font-size: 14px;
+	color: black;
+	padding: 10px;
+	text-decoration: none;
+	text-align: center;
+}
+.navi a:hover, .navi a:focus {
+	background-color: #222;
+	color: white;
+	
+}
+.navi a:active {
+	background-color: red;
+	
+}
+/* 문서 내 이동에서 대상 스타일 적용 */
+#intro:target{
+	background-color: yellow;
+	color: red;
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<nav class="navi">
+		<ul>
+			<li><a href="#intro">이용 안내</a></li>
+			<li><a href="#">객실 소개</a></li>
+			<li><a href="#">예약 방법 및 요금</a></li>
+			<li><a href="#">예약하기</a></li>
+		</ul>
+	</nav>
+</div>
+<div id="intro">
+<h1>이용안내</h1> <!-- 문서 내로 이동! -->
+</div>
+</body>
+</html>

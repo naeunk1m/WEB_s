@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>css2/test10.html</title>
+<!-- 모바일 뷰포트 크기 : https://yesviz.com/devices.php -->
+
+<!-- <link rel="stylesheet" media="미디어조건" href="css파일"> -->
+
+<!-- <style media="미디어 조건 "> -->
+<!--  스타일  -->
+<!-- </style> -->
+
+<style type="text/css">
+body {
+	background: url("images/bg0.jpg") no-repeat fixed;
+}
+/* 스크린 최대너비 1024px  배경이미지 bg1*/
+@media screen and (max-width:1024px){
+body {
+	background: url("images/bg1.jpg") no-repeat fixed;
+}
+}
+/* 스크린 최대너비 768px  배경이미지 bg2*/
+@media screen and (max-width:768px){
+body {
+	background: url("images/bg2.jpg") no-repeat fixed;
+}
+}
+/* 스크린 최대너비 320px  배경이미지 bg3*/
+@media screen and (max-width:320px){
+body {
+	background: url("images/bg3.jpg") no-repeat fixed;
+}
+}
+</style>
+
+</head>
+<body>
+
+</body>
+</html>

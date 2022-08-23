@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test5.html</title>
+<style type="text/css">
+/* 구조가상클래스 : 특정 위치의 자식 요소 선택
+:only-child 부모안에 하나뿐인 자식 선택,
+태그 : only-type-of 부모안에 태그가 하나뿐일 때 선택
+:first-child 부모안에 첫번째 자식
+:last-child 부모안에 마지막자식
+태그 : first-of-type 부모안에 첫번째 태그
+태그 : last-of-type 부모안에 마지막 태그
+:nth-child(n) 부모안에 n번째 자식
+:nth-last-child(n) 부모안에 끝에서 n번째 자식 
+태그 : nth-of-type(n) 부모안에 태그중에 n번째 자식
+태그 : nth-last-of-type(n) 부모안에 태그 중에 끝에서 n번째 자식*/
+
+
+/*  :nth-child(n) */
+/*  class="contents 안에 3번째 자식선택 글자색 변경" */
+.contents :nth-child(3){
+	color:red;
+}
+/* 태그: nth-of-type(n) */
+/* class="contents 안에 p태그 중에 세번째 자식 선택 글자색 변경" */
+.contents p:nth-of-type(3){
+	color:blue;
+}
+/* 홀수번째 :nth-child(odd) : nth-child(2n+1) */
+/* 짝수번째 :nth-child(even) : nth-child(2n) */
+table tr:nth-of-type(odd){
+	background-color: yellow;
+}
+table tr:nth-of-type(even){
+	background-color: green;
+}
+/* ::first-line 	, ::first-letter */
+.contents p::first-letter{
+	color:green;
+}
+/* ::before ::after */
+li.new::after{
+	content:"NEW!";
+	font-size:x-small;
+	margin:0px 10px;
+	background-color: red;
+	color:white;
+}
+</style>
+</head>
+<body>
+<ul>
+<li class="new">제품A</li>
+<li>제품B</li>
+<li>제품C</li>
+<li class="new">제품D</li>
+</ul>
+<table>
+<tr><td>HTML</td></tr>
+<tr><td>CSS</td></tr>
+<tr><td>자바스크립트</td></tr>
+<tr><td>jQuery</td></tr>
+<tr><td>JSP</td></tr>
+</table>
+<div class="contents">
+	<h2>이용 안내</h2>
+	<p>안내1</p>
+	<p>안내2</p>
+	<h2>객실 소개</h2>
+	<p>소개</p>
+	<h2>예약 방법 및 요금</h2>
+	<p>요금</p>
+</div>
+</body>
+</html>

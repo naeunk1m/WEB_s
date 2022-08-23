@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 머티미디어 파일 : 오디오 비디오 -->
+<!-- object 태그 : 오디오, 비디오, pdf, 멀티미디어 파일 -->
+
+<object width="600" height="300" data="product.pdf"></object><br>
+<!-- embed:오디오 비디오 이미지 멀티미디어 파일 -->
+<embed src="product.pdf" width="600" height="300">
+<embed src="spring.mp3">
+<!-- 비디오 mp4, webm, 오디오 mp3, mp4, m4a -->
+<embed src="salad.mp4" width="200" height="100">
+<!-- 오디오 controls 컨트롤바 보이게 함, autoplay 자동으로 실행
+loop 반복의미 -->
+<audio src="spring.mp3" autoplay controls loop></audio>
+<!-- 비디오 -->
+<video src="salad.mp4" controls width="300" height="200" loop></video>
+</body>
+</html>

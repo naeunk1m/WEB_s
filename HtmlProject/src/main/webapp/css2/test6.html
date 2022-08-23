@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css2/test6.html</title>
+<style type="text/css">
+/* transform 변형함수*/
+.box{
+	width: 100px; height: 100px;
+	border: 1px solid white;
+	margin: 40px;
+}
+#movexy{
+	width: 100px; height: 100px;
+	background-color: blue;
+}
+#movexy:hover {
+/* 	transform:translate(x,y); */
+	transform:translate(10px,20px);
+}
+#scale{
+	width: 100px; height: 100px;
+	background-color: red;
+}
+#scale:hover {
+/* 	transform:scale(x,y); */
+	transform:scale(0.7);
+}
+#rotate{
+	width: 100px; height: 100px;
+	background-color: skyblue;
+}
+#rotate:hover {
+/* 	transform:rotate(각도); x축 50도 회전*/
+	transform:rotateX(50deg);
+}
+/* transform:skew(각도); 왜곡 */
+</style>
+</head>
+<body>
+<div class="box"> <div id="movexy"> </div></div>
+<div class="box"> <div id="scale"> </div></div>
+<div class="box"> <div id="rotate">
+	<img src="images/호진루피.png" width="100px" height="100px">
+ </div></div>
+</body>
+</html>

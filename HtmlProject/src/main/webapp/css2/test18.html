@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>css2/test18.html</title>
+<style type="text/css">
+/* CSS그리드 레이아웃 : 간단 유지하면서 여러가지 기기에 반응 */
+/* 줄(행), 줄간격,  칼럼(열), 칼럼간격  => 왼쪽 위  */
+/* display grid(블록레벨 전체영역),inline-grid(인라인 레벨 요소영역) */
+#wrapper{
+/* 	그리드 컨테이너 지정 */
+	display: grid;
+/* 	컬럼과 줄을 지정 */
+/* 	grid-template-columns: 200px 200px 200px; */
+/*  상대적으로 크기 지정 fr 단위 */
+/* 	grid-template-columns: 1fr 1fr 1fr; */
+/* 	grid-template-columns: repeat(3,1fr); */
+/* 	자동으로 칼럼 개수 조절 auto-fill, auto-fit 남은공간없이 꽉채움 */
+	grid-template-columns: repeat(auto-fit,200px);
+	
+/* 	grid-template-rows: 100px; */
+/* 최소값, 최대값 지정 minmax() */
+	grid-template-rows: minmax(100px,auto);
+	
+/* 	그리드 항목 간격 지정 줄간격 20px, 컬럼간격 30px */
+	grid-gap: 20px 30px;
+}
+.items{
+	background-color: #eee;
+	padding: 10px;
+}
+.items:nth-child(odd){
+	background-color: #bbb;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<div class="items">1. display grid(블록레벨 전체영역),inline-grid(인라인 레벨 요소영역)</div>
+	<div class="items">2. display grid(블록레벨 전체영역),inline-grid(인라인 레벨 요소영역)</div>
+	<div class="items">3. display grid(블록레벨 전체영역),inline-grid(인라인 레벨 요소영역)</div>
+	<div class="items">4. display grid(블록레벨 전체영역),inline-grid(인라인 레벨 요소영역)</div>
+	<div class="items">5. display grid(블록레벨 전체영역),inline-grid(인라인 레벨 요소영역)</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css1/test5.html</title>
+<style type="text/css">
+/* 	텍스트 관련 스타일 */
+/* 글자색 색상 blue (영문명)
+화면을 이루는 빛의 색상 RGB(Red Green Blue)색상
+1) 16(0~9, 10~15, a~f)진수 색표현
+  Red 2자리 00~ff, Green 2자리, Blue 2자리 => #6자리
+  ff => 15*16+15*1=> 255
+2) 10(0~9)진수 색표현 9*10+9*1 => 99, ff=> 255
+*/
+h1 {
+/* 	color: red; */
+/*     R ff, G 00, B 00 */
+/* 	color: #ff0000;  */
+/* 	color: #0000ff; */
+/* 	color: rgb(255,0,0); */
+/* 투명도 */
+/* 	color: rgba(0,0,255,0.5);	 */
+}
+/* h1태그 글자색 파란색 16진수 적용
+p태그 글자색 그린색 영문 적용
+class="accent" 글자색 빨간색 적용 10진수, 글자굵게 적용 
+ */
+ h1{
+ 	color: #0000ff;
+ }
+ p{
+ 	color: green;
+ }
+ .accent{
+ 	color: rgb(255,0,0);
+ }
+/*  텍스트 정렬 left 왼쪽, right 오른쪽,center 가운데 */
+p{
+text-align:center;
+} 
+/* 줄간격(줄높이) 조절  */
+p{
+/* 	line-height: 24px; */
+/* 	line-height: 2.0; */
+	line-height: 200%;
+}
+/* 줄간격 세로로 가운데 정렬 */
+h1{
+	width: 100%;
+	height: 100px;
+	background-color: yellow;
+	text-align: center;
+/* 	줄간격 영역높이 맞추면 세로로 가운데 정렬*/
+	line-height: 100px;
+}
+.accent{
+/* 텍스트 줄을 표시하거나 없애주는 속성 none 밑줄없음
+underline 밑줄, overline 위에 줄, line-through 중간 줄*/
+	text-decoration: line-through;
+}
+a{
+	text-decoration: none;
+}
+/* 텍스트 그림자 효과 추가 
+text-shadow none, 
+가로(양수:오른쪽그림자, 음수:왼쪽그림자)
+ 세로(양수: 아래, 음수 :위로) 
+ 번짐정도(양수 : 크게 번짐, 음수:축소) 색상*/
+ .shadow1{
+ 	color: red;
+ 	text-shadow: 1px 1px black;
+ }
+ .shadow2{
+ 	text-shadow: 5px 5px 3px #ffa500;
+ }
+ .shadow3{
+ 	color:#fff;
+ 	text-shadow: 7px -7px 20px #000;
+ }
+/*  대소문자 변환 lowercase소문자 uppercase대문자
+capitalize 첫글자 대문자, 나머지 소문자*/
+.shadow4{
+	text-transform: capitalize;
+}
+
+p{
+/* 글자간격 */
+letter-spacing: 0.2em;
+/* 단어간격 */
+word-spacing: 1em;
+}
+
+</style>
+</head>
+<body>
+<h2 class="shadow1">HTML</h2>
+<h2 class="shadow2">CSS</h2>
+<h2 class="shadow3">자바스크립트</h2>
+<h2 class="shadow4">javascript</h2>
+<a href="test1.html">하이퍼링크</a>
+	<h1>레드향</h1>
+	<p>
+	껍질에 붉은 빛이 돌아 <span class="accent">레드향</span>이라 불린다
+	</p>
+	<p>
+	레드향은 한라봉과 귤을 교배한 것으로 <br>
+	일반 귤보다 2~3배 크고, 과육이 붉고 통통하다
+	</p>
+	<p class="italic">
+	비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다
+	</p>
+</body>
+</html>

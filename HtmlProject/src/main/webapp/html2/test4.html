@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html2/test4.html</title>
+</head>
+<body>
+<!-- 웹에서 사용하는 이미지 형식 jpg gif png -->
+<!-- jpg: 사진형태, 색상 명암을 다양하게 표현
+	 gif: 256색상 사용, 작은 아이콘, 작은 이미지 표현 
+	 png: 색상 다양하게 표현, 투명한 배경색, 웹 많이 사용-->
+<!-- test4.html 같은 폴더에 이미지 존재 -->
+<!-- 픽셀 : 화면을 이루는 빛 (하나의 점), 해상도 : 빛(점의 개수)
+	 px : 이미지 크기를 픽셀 지정, 모니터 해상도에 따라 고정되어 있는 고정값
+	 % : 이미지 크기를 브라우저 크기에 따라 변동 -->
+<img src="1.jpg">
+<!-- alt="이미지설명" 이미지가 없을 때 설명글 표시 -->
+<img alt="이미지설명" src="6.jpg">
+<br>
+<img src="2.jpg" width="100px" height="50px">
+<img src="3.jpg" width="50%" height="50%" border="2px">
+<br>
+<img src="img/4.jpg" >
+<img src="img/5.jpg" >
+<!-- 이미지 경로 상대참조 : 현 파일을 기준으로 다른 파일을 찾는 방법 -->
+<!-- 현 위치(.), 생략가능 -->
+<!-- 상위 폴더 (..) -->
+<h1>상위 폴더</h1>
+<img src="../html1/1.jpg">
+<!-- html1폴더 - img폴더 - 4.jpg -->
+<img src="../html1/img/4.jpg">
+</body>
+</html>
