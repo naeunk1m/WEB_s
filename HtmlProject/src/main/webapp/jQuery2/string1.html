@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery2/string1.html</title>
+<script type="text/javascript" src="../jQuery1/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	// 메인페이지 string1.html에서 string1.jsp페이지에 가서 출력결과 가져옴
+	// body에 출력
+	$(document).ready(function(){
+// 		alert("동작");
+		$.ajax({
+			url:'string1.jsp',
+			success:function(rdata){
+				$('body').append(rdata);
+			}
+		});
+		// #btn버튼을 클릭했을때 string1.jsp 출력을 가져와서 #div1 내용넣기
+		$('#btn').click(function(){
+// 			alert("클릭");
+			$.ajax({
+				url:'string1.jsp',
+				success:function(rdata){
+					$('#div1').html(rdata);
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<div id="div1">가져온내용</div>
+<input type="button" value="내용가져오기" id="btn">
+<h1>jQuery2/string1.html</h1>
+</body>
+</html>
+
+
+

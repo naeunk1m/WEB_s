@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery2/string2.html</title>
+<script type="text/javascript" src="../jQuery1/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// 버튼을 클릭했을때 id값을가지고 string2.jsp에 가서 체크 출력값을 
+		// 가져와서 iddiv에 출력
+		$('#btn').click(function(){
+// 			alert("클릭");
+			$.ajax({
+				url:'string2.jsp',
+				data:{'id':$('#id').val()},
+				success:function(rdata){
+					$('#iddiv').html(rdata);
+				}
+			});
+		});
+		
+		// id상자에 글을적고 포커스 해제했을때
+		// id값을가지고 string2.jsp에 가서 체크 출력값을 
+		// 가져와서 iddiv에 출력
+		$('#id').blur(function(){
+// 			alert("포커스 해제");
+			$.ajax({
+				url:'string2.jsp',
+				data:{'id':$('#id').val()},
+				success:function(rdata){
+					$('#iddiv').html(rdata);
+				}
+			});
+
+		});
+	});
+</script>
+</head>
+<body>
+<form action="a.jsp" method="get">
+아이디 : <input type="text" name="id" id="id">
+<input type="button" value="아이디중복체크" id="btn">
+<div id="iddiv"></div>
+</form>
+</body>
+</html>
