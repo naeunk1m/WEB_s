@@ -23,6 +23,7 @@ Class.forName(DRIVER);
 // 4. SQL 실행
 ResultSet rs = pstmt.executeQuery();
 // 5. 데이터처리	
+// json-simple-1.1.1.jar 설치
 // ArrayList 여러명의 회원정보를 저장
 JSONArray memberList=new JSONArray();
 while(rs.next()){

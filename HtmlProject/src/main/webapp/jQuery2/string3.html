@@ -12,7 +12,7 @@ $(document).ready(function(){
 		$.ajax({
 			url:'string3.jsp',
 			data:{'id':$('#id').val()},
-			success : function(rdata){
+			success:function(rdata){
 				$('#iddiv').html(rdata);
 			}	
 		});
